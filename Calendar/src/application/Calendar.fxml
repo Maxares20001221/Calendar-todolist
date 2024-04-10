@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.ColumnConstraints?>
+
+<VBox fx:id="vbox" spacing="10" alignment="center" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.CalendarController">
+    <padding>
+        <Insets top="10" right="10" bottom="10" left="10"/>
+    </padding>
+    <ComboBox fx:id="yearComboBox" prefWidth="150"/>
+    <ComboBox fx:id="monthComboBox" prefWidth="150"/>
+    <GridPane fx:id="calendarGrid" vgap="5" hgap="5">
+        <!-- Define RowConstraints and ColumnConstraints inside the GridPane -->
+        <rowConstraints>
+            <RowConstraints minHeight="10" prefHeight="30" vgrow="SOMETIMES"/>
+            <!-- Add RowConstraints for each row you want to have in the grid -->
+        </rowConstraints>
+        <columnConstraints>
+            <ColumnConstraints minWidth="10" prefWidth="30" hgrow="SOMETIMES"/>
+            <!-- Add ColumnConstraints for each column you want to have in the grid -->
+        </columnConstraints>
+        <!-- The actual date labels will be added dynamically by the controller -->
+    </GridPane>
+</VBox>
